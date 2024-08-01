@@ -15,7 +15,7 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
-builder.Services.AddScoped<ILoggerManager, LoggerManager>();
+builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 LoggingConfig.Configure();
 builder.Logging.ClearProviders();
@@ -25,7 +25,17 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddControllers()
 .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 var app = builder.Build();
+app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerManager>());
+
+// app.Use(async (context, next) =>
+// {
+//     var logger = context.RequestServices.GetRequiredService<ILoggerManager>();
+//     context.RequestServices.GetRequiredService<ILoggerManager>();
+//     app.ConfigureExceptionHandler(logger);
+//     await next();
+// });
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
