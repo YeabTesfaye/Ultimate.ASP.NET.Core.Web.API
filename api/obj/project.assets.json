@@ -59,6 +59,44 @@
           }
         }
       },
+      "Microsoft.AspNetCore.JsonPatch/8.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "8.0.7",
+          "Newtonsoft.Json": "13.0.3",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.6": {
         "type": "package",
         "dependencies": {
@@ -337,7 +375,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -931,6 +969,66 @@
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "NLog/5.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.3.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "NLog": "5.3.2"
+        },
+        "compile": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Swashbuckle.AspNetCore/6.4.0": {
@@ -1609,9 +1707,26 @@
           }
         }
       },
+      "CompanyEmployees.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
+          "Service.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CompanyEmployees.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CompanyEmployees.Presentation.dll": {}
+        }
+      },
       "Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Contracts.dll": {}
         },
@@ -1627,6 +1742,21 @@
         },
         "runtime": {
           "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "LoggerService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "NLog": "5.3.2",
+          "NLog.Extensions.Logging": "5.3.11"
+        },
+        "compile": {
+          "bin/placeholder/LoggerService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoggerService.dll": {}
         }
       },
       "Repository/1.0.0": {
@@ -1732,6 +1862,40 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.JsonPatch/8.0.7": {
+      "sha512": "/cNcH8Qd+3yH4yVUlOsZnxPcsmwnYSnkybKX7PMgrJkaH7ilp2IrcqJN4M376As+y1f+MVUyRqRtosB+PWWQbg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.jsonpatch/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/net462/Microsoft.AspNetCore.JsonPatch.xml",
+        "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/net8.0/Microsoft.AspNetCore.JsonPatch.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
+        "microsoft.aspnetcore.jsonpatch.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.7": {
+      "sha512": "Y8v0z0Zrc28wKxY98sGBwjnHqXeSDFh3VQ5ZEsIxGHD/1g9z2zulDJ8ue6Vww1F4gcUkY9XCQUHljNQu3my35A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/8.0.6": {
@@ -2201,10 +2365,10 @@
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2217,6 +2381,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -2226,7 +2391,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -3350,6 +3515,108 @@
         "lib/netstandard2.0/Mono.TextTemplating.dll",
         "mono.texttemplating.2.2.1.nupkg.sha512",
         "mono.texttemplating.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "sha512": "QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "type": "package",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net45/Newtonsoft.Json.Bson.dll",
+        "lib/net45/Newtonsoft.Json.Bson.pdb",
+        "lib/net45/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.xml",
+        "newtonsoft.json.bson.1.0.2.nupkg.sha512",
+        "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NLog/5.3.2": {
+      "sha512": "cQRQZuDMjSyMe9EQBnI9v55YAMMz8GAfFd6fFJ6tc/kXnG7Hze8p1I8MgvWSBG6E36wA8vSxRrlm8uSIG+SENg==",
+      "type": "package",
+      "path": "nlog/5.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.3.2.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/5.3.11": {
+      "sha512": "C3Rg6jmOkM7fNBX9jAoVlYzOwsrxdQzl9sYDK1EpRc7RCdjgs8FC9ivJCSsCu/m4l0w83xiTNz7Y1CzmD3BwZg==",
+      "type": "package",
+      "path": "nlog.extensions.logging/5.3.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "README.md",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/net6.0/NLog.Extensions.Logging.dll",
+        "lib/net6.0/NLog.Extensions.Logging.xml",
+        "lib/net8.0/NLog.Extensions.Logging.dll",
+        "lib/net8.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.1/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.1/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.5.3.11.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.4.0": {
@@ -4606,6 +4873,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "CompanyEmployees.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../CompanyEmployees.Presentation/CompanyEmployees.Presentation.csproj",
+      "msbuildProject": "../CompanyEmployees.Presentation/CompanyEmployees.Presentation.csproj"
+    },
     "Contracts/1.0.0": {
       "type": "project",
       "path": "../Contracts/Contracts.csproj",
@@ -4615,6 +4887,11 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "LoggerService/1.0.0": {
+      "type": "project",
+      "path": "../LoggerService/LoggerService.csproj",
+      "msbuildProject": "../LoggerService/LoggerService.csproj"
     },
     "Repository/1.0.0": {
       "type": "project",
@@ -4634,13 +4911,16 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "CompanyEmployees.Presentation >= 1.0.0",
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
+      "LoggerService >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.6",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7",
+      "NLog >= 5.3.2",
       "Repository >= 1.0.0",
       "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -4674,11 +4954,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\CompanyEmployees.Presentation\\CompanyEmployees.Presentation.csproj": {
+              "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\CompanyEmployees.Presentation\\CompanyEmployees.Presentation.csproj"
+            },
             "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Contracts\\Contracts.csproj"
             },
             "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\LoggerService\\LoggerService.csproj"
             },
             "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Repository\\Repository.csproj": {
               "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Repository\\Repository.csproj"
@@ -4727,6 +5013,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.7, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[5.3.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

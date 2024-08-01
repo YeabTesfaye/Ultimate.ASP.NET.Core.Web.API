@@ -28,7 +28,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

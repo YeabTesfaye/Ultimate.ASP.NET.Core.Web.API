@@ -1,6 +1,8 @@
 using api.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
-
+using NLog;
+using NLog.Extensions.Logging;
+using LoggerService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,7 +12,14 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
+LoggingConfig.Configure();
+builder.Logging.ClearProviders();
+builder.Logging.AddNLog();
 builder.Services.ConfigureSqlContext(builder.Configuration);
+// this is coz the controllers are defined in  a separate class library
+builder.Services.AddControllers()
+.AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,11 +68,13 @@ app.MapWhen(context => context.Request.Query.ContainsKey("testquerystring"), bui
     });
 });
 
-app.Run(async context =>
-{
-    Console.WriteLine("Writing the response to the client in the Run method");
-    context.Response.StatusCode = 200;
-    await context.Response.WriteAsync("Hello from the middleware component.");
-});
+// app.Run(async context =>
+// {
+//     Console.WriteLine("Writing the response to the client in the Run method");
+//     context.Response.StatusCode = 200;
+//     await context.Response.WriteAsync("Hello from the middleware component.");
+// });
+// configure routing to controllers for attributing routing
+app.MapControllers();
 
 app.Run();
