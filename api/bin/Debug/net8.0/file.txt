@@ -1,110 +1,98 @@
-2024-08-01 10:41:53.3731|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
-2024-08-01 10:41:53.3987|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
-2024-08-01 10:41:53.4112|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.
-2024-08-01 10:41:53.4271|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:3000
-2024-08-01 10:41:53.4271|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly api
-2024-08-01 10:41:53.4271|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
-2024-08-01 10:41:53.4271|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2024-08-01 10:41:53.4271|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2024-08-01 10:41:53.4271|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api
-2024-08-01 10:41:53.4271|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
-2024-08-01 10:42:00.6562|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
-2024-08-01 10:42:00.6562|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping
-2024-08-01 10:42:00.6619|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped
-2024-08-01 10:42:07.2990|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
-2024-08-01 10:42:07.3287|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
-2024-08-01 10:42:07.3431|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.
-2024-08-01 10:42:07.3600|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:3000
-2024-08-01 10:42:07.3600|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly api
-2024-08-01 10:42:07.3600|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
-2024-08-01 10:42:07.3600|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2024-08-01 10:42:07.3600|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2024-08-01 10:42:07.3614|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api
-2024-08-01 10:42:07.3614|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN5HVM68I9AF" received FIN.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AF" accepted.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AF" started.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AG" accepted.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AG" started.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN5HVM68I9AF" sending FIN because: "The Socket transport's send loop completed gracefully."
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AF" disconnecting.
-2024-08-01 10:42:52.2409|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AF" stopped.
-2024-08-01 10:42:52.2591|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:3000/api/companies - application/x-www-form-urlencoded 2331
-2024-08-01 10:42:52.2591|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
-2024-08-01 10:42:52.2679|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/companies'
-2024-08-01 10:42:52.2679|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'CompanyEmployees.Presentation.Controllers.CompaniesController.GetCompanies (CompanyEmployees.Presentation)' with route pattern 'api/companies' is valid for the request path '/api/companies'
-2024-08-01 10:42:52.2679|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'CompanyEmployees.Presentation.Controllers.CompaniesController.GetCompanies (CompanyEmployees.Presentation)'
-2024-08-01 10:42:52.2679|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
-2024-08-01 10:42:52.2679|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.
-2024-08-01 10:42:52.2679|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
-2024-08-01 10:42:52.2679|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CompanyEmployees.Presentation.Controllers.CompaniesController.GetCompanies (CompanyEmployees.Presentation)'
-2024-08-01 10:42:52.2916|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCompanies", controller = "Companies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompanies() on controller CompanyEmployees.Presentation.Controllers.CompaniesController (CompanyEmployees.Presentation).
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
-2024-08-01 10:42:52.2916|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller CompanyEmployees.Presentation.Controllers.CompaniesController (CompanyEmployees.Presentation)
-2024-08-01 10:42:52.3515|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
-2024-08-01 10:42:52.3515|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller CompanyEmployees.Presentation.Controllers.CompaniesController (CompanyEmployees.Presentation)
-2024-08-01 10:42:52.6865|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 8.0.7 initialized 'RepositoryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.7' with options: None
-2024-08-01 10:42:52.7163|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
-'DbSet<Company>()
-    .AsNoTracking()
-    .OrderBy(c => c.Name)'
-2024-08-01 10:42:52.8171|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
-'queryContext => new SingleQueryingEnumerable<Company>(
-    (RelationalQueryContext)queryContext, 
-    RelationalCommandCache.QueryExpression(
-        Projection Mapping:
-            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Company.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Company.Address (string) Required MaxLength(60), 1], [Property: Company.Country (string), 2], [Property: Company.Name (string) Required MaxLength(60), 3] }
-        SELECT c.CompanyId, c.Address, c.Country, c.Name
-        FROM Companies AS c
-        ORDER BY c.Name ASC), 
-    null, 
-    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Company>, 
-    Repository.RepositoryContext, 
-    False, 
-    False, 
-    True
-)'
-2024-08-01 10:42:52.8171|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection.
-2024-08-01 10:42:52.8394|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (9ms).
-2024-08-01 10:42:52.8394|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Ultimate' on server 'localhost'.
-2024-08-01 10:42:52.9527|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Ultimate' on server 'localhost'.
-2024-08-01 10:42:52.9527|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
-2024-08-01 10:42:52.9566|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms).
-2024-08-01 10:42:52.9566|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (3ms).
-2024-08-01 10:42:52.9566|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT [c].[CompanyId], [c].[Address], [c].[Country], [c].[Name]
-FROM [Companies] AS [c]
-ORDER BY [c].[Name]
-2024-08-01 10:42:52.9856|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT [c].[CompanyId], [c].[Address], [c].[Country], [c].[Name]
-FROM [Companies] AS [c]
-ORDER BY [c].[Name]
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'Ultimate' on server 'localhost'.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'Ultimate' on server 'localhost' is being disposed after spending 5ms reading results.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Ultimate' on server 'localhost'.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Ultimate' on server 'localhost' (2ms).
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
-2024-08-01 10:42:52.9911|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
-2024-08-01 10:42:52.9911|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>z__ReadOnlyList`1[[Entities.Models.Company, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2024-08-01 10:42:53.0461|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action CompanyEmployees.Presentation.Controllers.CompaniesController.GetCompanies (CompanyEmployees.Presentation) in 748.6848ms
-2024-08-01 10:42:53.0461|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CompanyEmployees.Presentation.Controllers.CompaniesController.GetCompanies (CompanyEmployees.Presentation)'
-2024-08-01 10:42:53.0461|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AG" completed keep alive response.
-2024-08-01 10:42:53.0496|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'RepositoryContext' disposed.
-2024-08-01 10:42:53.0496|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'Ultimate' on server 'localhost'.
-2024-08-01 10:42:53.0496|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms).
-2024-08-01 10:42:53.0496|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:3000/api/companies - 200 - application/json;+charset=utf-8 796.0340ms
-2024-08-01 10:42:53.0496|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN5HVM68I9AG", Request id "0HN5HVM68I9AG:00000001": started reading request body.
-2024-08-01 10:42:53.0496|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN5HVM68I9AG", Request id "0HN5HVM68I9AG:00000001": done reading request body.
-2024-08-01 10:45:04.1742|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AG" disconnecting.
-2024-08-01 10:45:04.1742|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN5HVM68I9AG" stopped.
-2024-08-01 10:45:04.1742|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN5HVM68I9AG" sending FIN because: "The Socket transport's send loop completed gracefully."
-2024-08-01 10:49:03.2095|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
-2024-08-01 10:49:03.2095|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping
-2024-08-01 10:49:03.2095|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped
+2024-08-01 11:05:09.2032|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:05:16.7094|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-01 11:05:42.6219|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:06:09.8830|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:06:19.4528|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:18:14.9196|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:18:18.1415|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-01 11:18:18.2054|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.|System.InvalidCastException: Unable to cast object of type 'NLog.Logger' to type 'Microsoft.Extensions.Logging.ILogger'.
+   at LoggerService.LoggerManager..ctor() in C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\LoggerManager.cs:line 9
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method4(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 11:18:36.6039|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.|System.InvalidCastException: Unable to cast object of type 'NLog.Logger' to type 'Microsoft.Extensions.Logging.ILogger'.
+   at LoggerService.LoggerManager..ctor() in C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\LoggerManager.cs:line 9
+   at InvokeStub_LoggerManager..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method4(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 11:20:40.7896|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:20:42.2516|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-01 11:53:45.4232|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 11:53:45.7409|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-01 11:58:17.2622|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 12:00:25.8909|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 12:08:37.2349|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 12:10:38.9040|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 12:10:41.3101|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-01 12:10:41.9068|ERROR|LoggerService.LoggerManager|Something went wrong in the GetAllCompanies service method AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+<>z__ReadOnlyList`1 -> IEnumerable`1
+<>z__ReadOnlyList`1[[Entities.Models.Company, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.CompanyDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> System.ArgumentException: Shared.DataTransferObjects.CompanyDto needs to have a constructor with 0 args or only optional args. Validate your configuration for details. (Parameter 'type')
+   at lambda_method28(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method28(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Service.CompanyService.GetAllCompanies(Boolean trackChanges) in C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\CompanyService.cs:line 25|
+2024-08-01 12:10:47.0211|ERROR|LoggerService.LoggerManager|Something went wrong in the GetAllCompanies service method AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+<>z__ReadOnlyList`1 -> IEnumerable`1
+<>z__ReadOnlyList`1[[Entities.Models.Company, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.CompanyDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> System.ArgumentException: Shared.DataTransferObjects.CompanyDto needs to have a constructor with 0 args or only optional args. Validate your configuration for details. (Parameter 'type')
+   at lambda_method28(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method28(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Service.CompanyService.GetAllCompanies(Boolean trackChanges) in C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\CompanyService.cs:line 25|
+2024-08-01 12:12:00.0415|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-01 12:12:01.1251|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|

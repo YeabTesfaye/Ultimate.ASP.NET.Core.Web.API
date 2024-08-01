@@ -19,8 +19,7 @@ public class CompaniesController : ControllerBase
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error : {ex.Message}");
-            throw;
+            return StatusCode(500, "Internal server error");
         }
     }
     

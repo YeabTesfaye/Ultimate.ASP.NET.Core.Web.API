@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
 using NLog.Extensions.Logging;
 using LoggerService;
+using Contracts;
+using Service.Contracts;
+using Service;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +15,8 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
+builder.Services.AddScoped<ILoggerManager, LoggerManager>();
+builder.Services.AddScoped<IServiceManager, ServiceManager>();
 LoggingConfig.Configure();
 builder.Logging.ClearProviders();
 builder.Logging.AddNLog();
@@ -19,7 +24,7 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 // this is coz the controllers are defined in  a separate class library
 builder.Services.AddControllers()
 .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
-
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

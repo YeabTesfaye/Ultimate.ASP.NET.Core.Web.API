@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tGZaOdZiyUY=",
+  "dgSpecHash": "ISiDCreB8C8=",
   "success": true,
   "projectFilePath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Service.Contracts\\Service.Contracts.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yeabiseraT\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\yeabiseraT\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\yeabiseraT\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\yeabiseraT\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\yeabiseraT\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

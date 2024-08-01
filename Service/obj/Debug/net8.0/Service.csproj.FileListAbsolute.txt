@@ -18,3 +18,5 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\obj\D
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\obj\Debug\net8.0\ref\Service.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\bin\Debug\net8.0\Entities.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\bin\Debug\net8.0\Entities.pdb
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\bin\Debug\net8.0\Shared.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Service\bin\Debug\net8.0\Shared.pdb

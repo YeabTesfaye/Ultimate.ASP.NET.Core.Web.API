@@ -1,14 +1,18 @@
+using AutoMapper;
 using Contracts;
 using Service.Contracts;
 
-namespace Service
+namespace Service;
+
+internal sealed class EmployeeService : IEmployeeService
 {
-    internal sealed class EmployeeService : IEmployeeService
+    private readonly ILoggerManager _logger;
+    private readonly IRepositoryManager _repository;
+    private readonly IMapper _mapper;
+    public EmployeeService(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
     {
-        private readonly IRepositoryManager _repository;
-        public EmployeeService(IRepositoryManager repository)
-        {
-            _repository = repository;
-        }
+        _repository = repository;
+        _logger = logger;
+        _mapper = mapper;
     }
 }

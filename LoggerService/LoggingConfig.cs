@@ -9,12 +9,16 @@ public static class LoggingConfig
     public static void Configure()
     {
         var config = new LoggingConfiguration();
-
-        var logfile = new FileTarget("logfile") { FileName = "file.txt" };
-        var logconsole = new ConsoleTarget("logconsole");
-
-        config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
-        config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+        // Define the file target
+        var logfile = new FileTarget("logfile")
+        {
+            FileName = "file.txt",
+            Layout = "${longdate}|${level:uppercase=true}|${logger}|${message}|${exception:format=tostring}"
+        };
+        config.AddTarget("logfile", logfile);
+        // Define logging rules
+        // Log warnings, errors, and fatal messages to the file
+        config.AddRule(LogLevel.Warn, LogLevel.Fatal, logfile);
 
         LogManager.Configuration = config;
     }
