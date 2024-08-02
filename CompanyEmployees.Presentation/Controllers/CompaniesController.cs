@@ -17,4 +17,10 @@ public class CompaniesController : ControllerBase
       
     }
     
+    [HttpGet("{id:guid}")]
+    public IActionResult GetCompany([FromRoute] Guid id){
+      
+        var company = _service.CompanyService.GetCompany(id, trackChanges: false);
+        return Ok(company);
+    }
 }
