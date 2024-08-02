@@ -6,6 +6,7 @@ using Contracts;
 using Service.Contracts;
 using Service;
 using NLog.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,10 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-
+//this is  used to configure the behavior of API controllers  specifically regarding model state validation. 
+builder.Services.Configure<ApiBehaviorOptions>(options => {
+    options.SuppressModelStateInvalidFilter = true;
+});
 // config for  type 
 builder.Services.AddControllers(config => {
 config.RespectBrowserAcceptHeader = true;

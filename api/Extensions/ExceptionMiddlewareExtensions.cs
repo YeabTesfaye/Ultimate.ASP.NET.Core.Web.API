@@ -2,9 +2,11 @@
 using System.Net;
 using Contracts;
 using Entities.ErrorModel;
+using Entities.Exceptions;
 using Entities.Models.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace api.Extensions;
 
@@ -25,6 +27,7 @@ public static class ExceptionMiddlewareExtensions
                     context.Response.StatusCode = contextFeature.Error switch
                     {
                         NotFoundException => StatusCodes.Status404NotFound,
+                        BadRequestException => StatusCodes.Status400BadRequest,
                         _ => StatusCodes.Status500InternalServerError
                     };
                     logger.LogError($"Something went wrong: {contextFeature.Error}");
