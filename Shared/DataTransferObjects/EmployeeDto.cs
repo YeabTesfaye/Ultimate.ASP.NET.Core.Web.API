@@ -1,2 +1,9 @@
 namespace Shared.DataTransferObjects;
-public record EmployeeDto(Guid Id, string Name, int Age, string Position);
+
+public record EmployeeDto(){
+    public Guid Id{ get; set; }
+    public string? Name { get; set; }
+    public int Age { get; set; }
+    public string? Position { get; set; }
+}
+

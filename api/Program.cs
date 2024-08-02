@@ -30,6 +30,15 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+// config for  type 
+builder.Services.AddControllers(config => {
+config.RespectBrowserAcceptHeader = true;
+config.ReturnHttpNotAcceptable = true;
+}).AddXmlDataContractSerializerFormatters()
+ .AddCustomCSVFormatter()
+.AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
+
+
 // Add controllers
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
