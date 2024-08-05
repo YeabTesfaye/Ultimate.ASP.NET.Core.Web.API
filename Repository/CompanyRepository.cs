@@ -14,6 +14,8 @@ public class CompanyRepository : RepositoryBase<Company>,ICompanyRepository
         Create(company);
     }
 
+    public void DeleteCompany(Company company) => Delete(company);
+
     public IEnumerable<Company> GetAllCompanies(bool trackChanges) =>
         [.. FindAll(trackChanges).OrderBy(c => c.Name)];
 
