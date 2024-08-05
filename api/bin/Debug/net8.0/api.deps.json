@@ -12,6 +12,7 @@
           "Contracts": "1.0.0",
           "Entities": "1.0.0",
           "LoggerService": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
           "Microsoft.AspNetCore.OpenApi": "8.0.6",
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.Design": "8.0.7",
@@ -1009,6 +1010,7 @@
       },
       "CompanyEmployees.Presentation/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "8.0.7",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
           "Service.Contracts": "1.0.0"
         },

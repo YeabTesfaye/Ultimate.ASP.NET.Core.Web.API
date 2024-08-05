@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "CompanyEmployees.Presentation/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "8.0.7",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
           "Service.Contracts": "1.0.0"
         },

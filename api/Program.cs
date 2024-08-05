@@ -7,6 +7,9 @@ using Service.Contracts;
 using Service;
 using NLog.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.Extensions.Options;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,18 +37,26 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.Configure<ApiBehaviorOptions>(options => {
     options.SuppressModelStateInvalidFilter = true;
 });
-// config for  type 
+// config for  using different type
 builder.Services.AddControllers(config => {
 config.RespectBrowserAcceptHeader = true;
 config.ReturnHttpNotAcceptable = true;
+config.InputFormatters.Insert(0,GetJsonPatchInputFormatter());
 }).AddXmlDataContractSerializerFormatters()
  .AddCustomCSVFormatter()
 .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
 
-
 // Add controllers
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
+
+// include the JSON Patch formatter in
+NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
+new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
+.Services.BuildServiceProvider()
+.GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
+.OfType<NewtonsoftJsonPatchInputFormatter>().First();
+
 
 var app = builder.Build();
 

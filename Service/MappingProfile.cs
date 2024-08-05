@@ -17,7 +17,7 @@ opt => opt.MapFrom(x => string.Join(' ', x.Address, x.Country)));
  CreateMap<EmployeeForUpdateDto,Employee>();
  CreateMap<CompanyForCreationDto,Company>();
  CreateMap<CompanyForUpdateDto, Company>();
- 
+ CreateMap<EmployeeForUpdateDto,Employee>().ReverseMap();
 }
 
 
