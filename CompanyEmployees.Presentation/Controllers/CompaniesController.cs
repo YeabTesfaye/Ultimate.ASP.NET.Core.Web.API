@@ -1,4 +1,5 @@
 
+using CompanyEmployees.Presentation.ModelBinders;
 using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
 using Shared.DataTransferObjects;
@@ -39,13 +40,16 @@ public class CompaniesController : ControllerBase
     }
 
     [HttpGet("collection/({ids})", Name ="CompanyCollection")]
-    public IActionResult GetCompanyCollection(IEnumerable<Guid> ids){
+    public IActionResult GetCompanyCollection([ModelBinder(
+        BinderType =typeof(ArrayModelBinder)
+    )] IEnumerable<Guid> ids){
+        
         var companys = _service.CompanyService.GetByIds(ids, trackChanges:false);
         return Ok(companys);
     }
     [HttpPost("collection")]
     public IActionResult CreateCompanyCollection([FromBody] IEnumerable<CompanyForCreationDto> companycollecion){
-        var result = _service.CompanyService.CreateCompanyCollection(companycollecion);
-        return CreatedAtRoute("CompanyCollection",new {result.ids}, result.companies);
+        var (companies, ids) = _service.CompanyService.CreateCompanyCollection(companycollecion);
+        return CreatedAtRoute("CompanyCollection",new {ids}, companies);
     }
 }

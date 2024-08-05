@@ -58,6 +58,7 @@ internal  sealed class CompanyService : ICompanyService
 
     public IEnumerable<CompanyDto> GetByIds(IEnumerable<Guid> ids, bool trackChanges)
     {
+       
        if(ids is null){
         throw new IdParametersBadRequestException();
        }
