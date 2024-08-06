@@ -3,6 +3,7 @@
 using Contracts;
 using Microsoft.EntityFrameworkCore;
 using Shared.RequestFeatures;
+using Repository.Extensions;
 
 namespace Repository;
 
@@ -29,8 +30,9 @@ public class EmployeeRepository : RepositoryBase<Employee>, IEmployeeRepository
   public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId, EmployeeParameters
   employeeParameters, bool trackChanges)
   {
-    var employees = await FindByCondition(e => e.CompanyId.Equals(companyId) && (e.Age
-    >= employeeParameters.MinAge && e.Age <= employeeParameters.MaxAge), trackChanges)
+    var employees = await FindByCondition(e => e.CompanyId.Equals(companyId),trackChanges)
+    .FilterEmployees(employeeParameters.MinAge,employeeParameters.MaxAge)
+    .Search(employeeParameters.SearchTerm ?? string.Empty)
    .OrderBy(e => e.Name)
    .ToListAsync();
 
