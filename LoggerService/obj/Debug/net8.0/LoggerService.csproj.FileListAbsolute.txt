@@ -16,3 +16,5 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\obj\Debug\net8.0\refint\LoggerService.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\obj\Debug\net8.0\LoggerService.pdb
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\obj\Debug\net8.0\ref\LoggerService.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\bin\Debug\net8.0\Shared.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\LoggerService\bin\Debug\net8.0\Shared.pdb

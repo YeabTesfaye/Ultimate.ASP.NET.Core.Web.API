@@ -16,3 +16,5 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\ob
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\obj\Debug\net8.0\ref\Repository.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\bin\Debug\net8.0\Contracts.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\bin\Debug\net8.0\Contracts.pdb
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\bin\Debug\net8.0\Shared.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Repository\bin\Debug\net8.0\Shared.pdb

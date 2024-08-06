@@ -31,6 +31,9 @@
             "projectReferences": {
               "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Shared\\Shared.csproj"
               }
             }
           }

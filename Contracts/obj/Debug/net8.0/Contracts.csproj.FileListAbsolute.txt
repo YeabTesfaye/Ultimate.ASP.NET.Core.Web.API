@@ -14,3 +14,5 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\bin
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\bin\Debug\net8.0\Entities.pdb
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\obj\Debug\net8.0\Contracts.csproj.AssemblyReference.cache
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\obj\Debug\net8.0\Contracts.csproj.Up2Date
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\bin\Debug\net8.0\Shared.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\Contracts\bin\Debug\net8.0\Shared.pdb
