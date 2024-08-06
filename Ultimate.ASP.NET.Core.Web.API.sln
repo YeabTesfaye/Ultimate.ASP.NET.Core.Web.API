@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyEmployees.Presentati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{6A46D252-FF5C-448F-8E34-9EA468E405FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{92238CAA-FC41-49C0-9414-CF6E8B8E7E4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{92238CAA-FC41-49C0-9414-CF6E8B8E7E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFilters", "ActionFilters\ActionFilters.csproj", "{94481BC3-F1AA-4E73-93E3-47ACE65DB364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{92238CAA-FC41-49C0-9414-CF6E8B8E7E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92238CAA-FC41-49C0-9414-CF6E8B8E7E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92238CAA-FC41-49C0-9414-CF6E8B8E7E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94481BC3-F1AA-4E73-93E3-47ACE65DB364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94481BC3-F1AA-4E73-93E3-47ACE65DB364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94481BC3-F1AA-4E73-93E3-47ACE65DB364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94481BC3-F1AA-4E73-93E3-47ACE65DB364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

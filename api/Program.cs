@@ -9,6 +9,7 @@ using NLog.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Options;
+using CompanyEmployees.Presentation.ActionFilters;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +38,8 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.Configure<ApiBehaviorOptions>(options => {
     options.SuppressModelStateInvalidFilter = true;
 });
+// register action filter 
+builder.Services.AddScoped<ValidationFilterAttribute>();
 // config for  using different type
 builder.Services.AddControllers(config => {
 config.RespectBrowserAcceptHeader = true;
