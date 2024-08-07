@@ -33,33 +33,43 @@ public class CompaniesController : ControllerBase
         return CreatedAtRoute("CompanyById", new { id = createdCompany.Id }, createdCompany);
     }
 
-    [HttpGet("collection/({ids})", Name ="CompanyCollection")]
+    [HttpGet("collection/({ids})", Name = "CompanyCollection")]
     public async Task<IActionResult> GetCompanyCollection([ModelBinder(
         BinderType =typeof(ArrayModelBinder)
-    )] IEnumerable<Guid> ids){
-        
-        var companys = await _service.CompanyService.GetByIdsAsync(ids, trackChanges:false);
+    )] IEnumerable<Guid> ids)
+    {
+
+        var companys = await _service.CompanyService.GetByIdsAsync(ids, trackChanges: false);
         return Ok(companys);
     }
     [HttpPost("collection")]
-    public async Task<IActionResult> CreateCompanyCollection([FromBody] IEnumerable<CompanyForCreationDto> companycollecion){
-       if (companycollecion == null || !companycollecion.Any())
+    public async Task<IActionResult> CreateCompanyCollection([FromBody] IEnumerable<CompanyForCreationDto> companycollecion)
+    {
+        if (companycollecion == null || !companycollecion.Any())
         {
-        return BadRequest("Company collection is null or empty.");
+            return BadRequest("Company collection is null or empty.");
         }
         var (companies, ids) = await _service.CompanyService.CreateCompanyCollectionAsync(companycollecion);
-        return CreatedAtRoute("CompanyCollection",new {ids}, companies);
+        return CreatedAtRoute("CompanyCollection", new { ids }, companies);
     }
     [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> DeleteCompany(Guid id){
-       await _service.CompanyService.DeleteCompanyAsync(id,trackChanges:false);
+    public async Task<IActionResult> DeleteCompany(Guid id)
+    {
+        await _service.CompanyService.DeleteCompanyAsync(id, trackChanges: false);
         return NoContent();
     }
     [HttpPut("{id:guid}")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
-    public async Task<IActionResult> UpdateCompany(Guid id,[FromBody] CompanyForUpdateDto company){
+    public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] CompanyForUpdateDto company)
+    {
 
-       await _service.CompanyService.UpdateCompanyAsync(id,company,trackChanges:true);
+        await _service.CompanyService.UpdateCompanyAsync(id, company, trackChanges: true);
         return NoContent();
+    }
+    [HttpOptions]
+    public IActionResult GetCompaniesOptions()
+    {
+        Response.Headers.Allow = "GET,OPTIONS,POST";
+        return Ok();
     }
 }
