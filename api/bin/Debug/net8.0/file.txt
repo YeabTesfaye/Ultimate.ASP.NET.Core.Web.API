@@ -1146,3 +1146,5 @@
 2024-08-07 09:14:38.4003|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
 2024-08-07 09:19:35.7868|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
 2024-08-07 10:10:50.6405|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
+2024-08-07 10:11:05.8213|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-07 10:11:06.4769|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
