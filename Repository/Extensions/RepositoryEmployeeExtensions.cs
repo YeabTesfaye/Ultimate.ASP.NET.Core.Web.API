@@ -26,8 +26,7 @@ namespace Repository.Extensions
 
             var orderQuery = OrderQueryBuilder.CreateOrderQuery<Employee>(orderByQueryString);
 
-            // Log the generated order query
-            Console.WriteLine($"Generated Order Query: {orderQuery}");
+        
 
             if (string.IsNullOrWhiteSpace(orderQuery))
                 return employees.OrderBy(e => e.Name);

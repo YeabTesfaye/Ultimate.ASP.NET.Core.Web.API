@@ -1,3 +1,4 @@
+using System.Dynamic;
 using AutoMapper;
 using Contracts;
 using Entities.Exceptions;
@@ -12,11 +13,14 @@ internal sealed class EmployeeService : IEmployeeService
     private readonly ILoggerManager _logger;
     private readonly IRepositoryManager _repository;
     private readonly IMapper _mapper;
-    public EmployeeService(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
+    private readonly IDataShaper<EmployeeDto> _dataShaper;
+    public EmployeeService(IRepositoryManager repository, ILoggerManager logger, 
+    IMapper mapper, IDataShaper<EmployeeDto> dataShaper)
     {
         _repository = repository;
         _logger = logger;
         _mapper = mapper;
+        _dataShaper = dataShaper;
     }
 
     public async Task<EmployeeDto> CreateEmployeeForCompanyAsync(Guid companyId, EmployeeForCreationDto employeeForCreationDto, bool trackChanges)
@@ -56,7 +60,7 @@ internal sealed class EmployeeService : IEmployeeService
         return (employeeToPatch, employeeEntity: employeeDb);
     }
 
-    public async Task<(IEnumerable<EmployeeDto> employees, MetaData metaData)>
+    public async Task<(IEnumerable<ExpandoObject> employees, MetaData metaData)>
  GetEmployeesAsync
  (Guid companyId, EmployeeParameters employeeParameters, bool trackChanges)
     {
@@ -67,7 +71,8 @@ internal sealed class EmployeeService : IEmployeeService
         .GetEmployeesAsync(companyId, employeeParameters, trackChanges);
         var employeesDto =
         _mapper.Map<IEnumerable<EmployeeDto>>(employeesWithMetaData);
-        return (employees: employeesDto, metaData: employeesWithMetaData.MetaData);
+        var shapedData = _dataShaper.ShapeData(employeesDto,employeeParameters.Fields ?? string.Empty);
+        return (employees: shapedData, metaData: employeesWithMetaData.MetaData);
     }
 
     public async Task SaveChangesForPatchAsync(EmployeeForUpdateDto employeeToPatch, Employee employeeEntity)

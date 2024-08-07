@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Options;
 using CompanyEmployees.Presentation.ActionFilters;
+using Shared.DataTransferObjects;
+using Service.DataShaping;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -60,6 +62,8 @@ new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
 .GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
 .OfType<NewtonsoftJsonPatchInputFormatter>().First();
 
+// register the Datashapper clas 
+builder.Services.AddScoped<IDataShaper<EmployeeDto>,DataShaper<EmployeeDto>>();
 
 var app = builder.Build();
 
