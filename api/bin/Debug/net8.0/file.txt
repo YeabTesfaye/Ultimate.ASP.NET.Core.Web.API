@@ -3328,3 +3328,5 @@
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-08 15:36:10.0774|WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\wwwroot. Static files may be unavailable.|
+2024-08-08 15:36:10.6211|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect.|
