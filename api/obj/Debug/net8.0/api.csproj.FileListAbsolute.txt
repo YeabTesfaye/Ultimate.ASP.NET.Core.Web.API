@@ -195,3 +195,4 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\bin\Debug
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\bin\Debug\net8.0\Shared.pdb
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\api\bin\Debug\net8.0\AspNetCoreRateLimit.dll

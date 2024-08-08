@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using CompanyEmployees.Presentation.ActionFilters;
 using Shared.DataTransferObjects;
 using Service.DataShaping;
+using AspNetCoreRateLimit;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -64,9 +65,11 @@ new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
 
 // register the Datashapper clas 
 builder.Services.AddScoped<IDataShaper<EmployeeDto>,DataShaper<EmployeeDto>>();
-
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureRateLimitingOptions();
+builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
-
+app.UseIpRateLimiting();
 // Configure exception handler middleware
 app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerManager>());
 
