@@ -38,12 +38,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Contracts",
+              "Title": "Contracts.csproj",
               "DocumentMoniker": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Contracts\\Contracts.csproj",
               "RelativeDocumentMoniker": "Contracts\\Contracts.csproj",
               "ToolTip": "C:\\Users\\yeabiseraT\\Desktop\\Projects\\Ultimate.ASP.NET.Core.Web.API\\Contracts\\Contracts.csproj",
@@ -52,10 +56,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-06T08:01:59.952Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "Service.Contracts\\ICompanyService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T08:49:10.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T08:49:10.174Z"
             },
             {
               "$type": "Document",

@@ -38,38 +38,39 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 //this is  used to configure the behavior of API controllers  specifically regarding model state validation. 
-builder.Services.Configure<ApiBehaviorOptions>(options => {
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
     options.SuppressModelStateInvalidFilter = true;
 });
 // register action filter 
 builder.Services.AddScoped<ValidationFilterAttribute>();
 // config for  using different type
-builder.Services.AddControllers(config => {
-config.RespectBrowserAcceptHeader = true;
-config.ReturnHttpNotAcceptable = true;
-config.InputFormatters.Insert(0,GetJsonPatchInputFormatter());
+builder.Services.AddControllers(config =>
+{
+    config.RespectBrowserAcceptHeader = true;
+    config.ReturnHttpNotAcceptable = true;
+    config.InputFormatters.Insert(0, GetJsonPatchInputFormatter());
 }).AddXmlDataContractSerializerFormatters()
  .AddCustomCSVFormatter()
 .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
 
-// Add controllers
-builder.Services.AddControllers()
-    .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
 
-// include the JSON Patch formatter in
-NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
-new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
-.Services.BuildServiceProvider()
-.GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
-.OfType<NewtonsoftJsonPatchInputFormatter>().First();
+
 
 // register the Datashapper clas 
-builder.Services.AddScoped<IDataShaper<EmployeeDto>,DataShaper<EmployeeDto>>();
+builder.Services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 builder.Services.AddMemoryCache();
 builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddAuthentication();
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJWT(builder.Configuration);
 var app = builder.Build();
 app.UseIpRateLimiting();
+
+// authentication middleware to the application’s pipline 
+app.UseAuthentication();
+app.UseAuthorization();
 // Configure exception handler middleware
 app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerManager>());
 
@@ -99,3 +100,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+// include the JSON Patch formatter in
+NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
+new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
+.Services.BuildServiceProvider()
+.GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
+.OfType<NewtonsoftJsonPatchInputFormatter>().First();
