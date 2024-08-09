@@ -4,9 +4,11 @@ using Contracts;
 using Entities.ConfigurationModels;
 using Entities.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Repository;
 using Service;
 using Service.Contracts;
@@ -86,9 +88,9 @@ public static class ServiceExtensions
     public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)
     {
         var jwtConfiguration = new JwtConfiguration();
-        configuration.Bind(jwtConfiguration.Section,jwtConfiguration);
+        configuration.Bind(jwtConfiguration.Section, jwtConfiguration);
         var secretKey = jwtConfiguration.Secret;
-    
+
 
         services.AddAuthentication(opt =>
         {
@@ -110,5 +112,60 @@ public static class ServiceExtensions
     };
 });
     }
+
+    public static void ConfigureSwagger(this IServiceCollection services)
+    {
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Ultimate Web Api",
+                Version = "v1",
+                Description = "CompanyEmployee API",
+                TermsOfService = new Uri("https://github.com/YeabTesfaye/Ultimate.ASP.NET.Core.Web.API"),
+                Contact = new OpenApiContact
+                {
+                    Name = "Yeab",
+                    Email = "hereisyeab@gmail.com",
+                    Url = new Uri("https://www.linkedin.com/in/yeabisera-tesefaye-815ba0261/")
+                },
+                License = new OpenApiLicense
+                {
+                    Name = "CompanyEmployees API ",
+                    Url = new Uri("https://github.com/YeabTesfaye/Ultimate.ASP.NET.Core.Web.API")
+                }
+            });
+            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                In = ParameterLocation.Header,
+                Description = "Please enter a valid token",
+                Name = "Authorization",
+                Type = SecuritySchemeType.Http,
+                BearerFormat = "JWT",
+                Scheme = "Bearer"
+            });
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    new string[] { }
+                }
+            });
+            // Include XML comments
+            var xmlFile = $"{typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly.GetName().Name}.xml";
+            var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            c.IncludeXmlComments(xmlPath);
+        });
+    }
+
+
+
 
 }

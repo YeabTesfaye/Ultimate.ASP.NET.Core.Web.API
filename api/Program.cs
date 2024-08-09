@@ -13,7 +13,7 @@ using CompanyEmployees.Presentation.ActionFilters;
 using Shared.DataTransferObjects;
 using Service.DataShaping;
 using AspNetCoreRateLimit;
-
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,40 +24,39 @@ builder.Logging.AddNLog();
 
 // Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+builder.Services.ConfigureSwagger();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
-
 builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-//this is  used to configure the behavior of API controllers  specifically regarding model state validation. 
+
+// Configure API behavior options
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
-// register action filter 
+
+// Register action filter 
 builder.Services.AddScoped<ValidationFilterAttribute>();
-// config for  using different type
+
+// Config for different input formatters
 builder.Services.AddControllers(config =>
 {
     config.RespectBrowserAcceptHeader = true;
     config.ReturnHttpNotAcceptable = true;
     config.InputFormatters.Insert(0, GetJsonPatchInputFormatter());
-}).AddXmlDataContractSerializerFormatters()
- .AddCustomCSVFormatter()
+})
+.AddXmlDataContractSerializerFormatters()
+.AddCustomCSVFormatter()
 .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
 
-
-
-
-// register the Datashapper clas 
+// Register the DataShaper class 
 builder.Services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 builder.Services.AddMemoryCache();
 builder.Services.ConfigureRateLimitingOptions();
@@ -65,12 +64,15 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
+
 var app = builder.Build();
+
 app.UseIpRateLimiting();
 
-// authentication middleware to the application’s pipline 
+// Authentication middleware to the application’s pipeline 
 app.UseAuthentication();
 app.UseAuthorization();
+
 // Configure exception handler middleware
 app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerManager>());
 
@@ -78,7 +80,10 @@ app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerManager>())
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Demo API v1");
+    });
 }
 else
 {
@@ -87,22 +92,19 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.All
 });
-
 app.UseCors("CorsPolicy");
-
-app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
-// include the JSON Patch formatter in
+
+// Include the JSON Patch formatter
 NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
-new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
-.Services.BuildServiceProvider()
-.GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
-.OfType<NewtonsoftJsonPatchInputFormatter>().First();
+    new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
+    .Services.BuildServiceProvider()
+    .GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
+    .OfType<NewtonsoftJsonPatchInputFormatter>().First();

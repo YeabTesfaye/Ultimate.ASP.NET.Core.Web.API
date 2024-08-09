@@ -20,3 +20,4 @@ C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\CompanyEmploy
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\CompanyEmployees.Presentation\bin\Debug\net8.0\Entities.pdb
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\CompanyEmployees.Presentation\bin\Debug\net8.0\Shared.dll
 C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\CompanyEmployees.Presentation\bin\Debug\net8.0\Shared.pdb
+C:\Users\yeabiseraT\Desktop\Projects\Ultimate.ASP.NET.Core.Web.API\CompanyEmployees.Presentation\bin\Debug\net8.0\CompanyEmployees.Presentation.xml
