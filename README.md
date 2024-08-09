@@ -16,11 +16,11 @@ Ultimate .NET Web API is a robust backend solution designed to handle various co
   - [Asynchronous Code](#7-asynchronous-code)
   - [Modular Design](#8-modular-design)
   - [Advanced Querying Capabilities](#9-advanced-querying-capabilities)
-    - [Paging](#paging)
-    - [Filtering](#filtering)
-    - [Searching](#searching)
-    - [Sorting](#sorting)
-    - [Data Shaping](#data-shaping)
+    - Paging
+    - Filtering
+    - Searching
+    - Sorting
+    - Data Shaping
   - [Rate Limiting](#10-rate-limiting)
   - [JWT and Identity for Authentication and Authorization](#11-jwt-and-identity-for-authentication-and-authorization)
   - [API Documentation with Swagger](#12-api-documentation-with-swagger)
@@ -35,6 +35,7 @@ Ultimate .NET Web API is a robust backend solution designed to handle various co
   - [Usage](#usage)
 - [Contributing](#contributing)
 - [Conclusion](#conclusion)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Key Features
@@ -105,7 +106,7 @@ Ultimate .NET Web API is a robust backend solution designed to handle various co
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/Ultimate-Dotnet-Web-API.git
+    https://github.com/YeabTesfaye/Ultimate.ASP.NET.Core.Web.API
    cd Ultimate-Dotnet-Web-API
    ```
 
@@ -271,6 +272,10 @@ Contributions are welcome! Please fork the repository and create a pull request.
 ## Conclusion
 
 Ultimate .NET Web API is a comprehensive backend solution that integrates a wide range of essential features for modern web applications. From robust security measures to advanced querying capabilities, this API is designed to be scalable, maintainable, and easy to use. Whether you're building a small project or a large-scale enterprise application, Ultimate .NET Web API offers the tools and structure you need to succeed. Your contributions and feedback are highly appreciated as we continue to improve and expand the functionality of this API.
+
+## Acknowledgements
+
+A special thanks to Code Maze for their insightful book "Ultimate ASP.NET Core Web API," which served as a valuable resource in the development of this project.
 
 ## License
 
