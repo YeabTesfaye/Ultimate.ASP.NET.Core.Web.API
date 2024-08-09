@@ -119,7 +119,7 @@ public static class ServiceExtensions
         {
             c.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "Ultimate Web Api",
+                Title = "Ultimate dotnet Web Api",
                 Version = "v1",
                 Description = "CompanyEmployee API",
                 TermsOfService = new Uri("https://github.com/YeabTesfaye/Ultimate.ASP.NET.Core.Web.API"),
@@ -132,7 +132,7 @@ public static class ServiceExtensions
                 License = new OpenApiLicense
                 {
                     Name = "CompanyEmployees API ",
-                    Url = new Uri("https://github.com/YeabTesfaye/Ultimate.ASP.NET.Core.Web.API")
+                    Url = new Uri("https://choosealicense.com/licenses/mit/")
                 }
             });
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
